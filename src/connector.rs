@@ -18,8 +18,8 @@ type BoxError = Box<dyn std::error::Error + Send + Sync>;
 /// A Connector for the `https` scheme.
 #[derive(Clone)]
 pub struct HttpsConnector<T> {
-    http: T,
-    tls_config: Arc<ClientConfig>,
+    pub http: T,
+    pub tls_config: Arc<ClientConfig>,
 }
 
 #[cfg(all(
